@@ -1,7 +1,6 @@
 import gc
 import torch
 from dataclasses import dataclass
-import clip
 from typing import Any, Dict, List, Optional, Tuple, Union, Callable
 import torch.nn as nn
 import torch.nn.functional as F
@@ -2239,24 +2238,6 @@ sam_model = GroundingSAM.load_sam(sam_checkpoint_path, device=device)
 # Create an instance of GroundingSAM
 grounding_sam = GroundingSAM(dino_model=dino_model, sam_model=sam_model, device=device)
 
-def extract_masked_features(image, mask, model, preprocess, device):
-    """
-    Apply a binary mask on the image, convert it to tensor, and extract features.
-    """
-    # Apply the mask (convert to RGBA and keep only masked area)
-    mask_3ch = np.stack([mask]*3, axis=-1)  # Convert to 3 channels
-    masked_np = image * mask_3ch  # Element-wise masking
-    masked_pil = Image.fromarray(masked_np.astype(np.uint8))
-
-    # Preprocess and move to device
-    input_tensor = preprocess(masked_pil).unsqueeze(0).to(device)
-
-    # Extract features
-    with torch.no_grad():
-        features = model.encode_image(input_tensor)
-
-    return features.cpu()
-
 def generate_mask_and_extract_tensor(image_tensor, grounding_sam, prompt, device):
     """
     Generate and display the mask for the given image.
@@ -2483,11 +2464,8 @@ def run_batch_generation(story_pipeline, CONSTANT, CHARACTER_DESCRIPTIONS, SCENE
         )
 
         print(f"Extracted tensor for character {name}...")
-
-        feature_vector = extract_masked_features(cropped_image, mask, clip_model, clip_preprocess, device="cuda")
-
         print(f"Storing extracted features for {name}...")
-        memory_module.store_features(name, feature_vector)
+        memory_module.store_features(name, extracted_tensor)
 
         masks_list.append(mask)
         cropped_images_list.append(cropped_image)
