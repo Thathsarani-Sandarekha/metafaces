@@ -21,14 +21,14 @@ This project was developed as part of our undergraduate research to advance cont
 To get started:
 
 1. Clone this repository
-2. Set up the required Python environment and dependencies
+2. Set up the required Python environment and dependencies - use requirements.txt
 3. Make sure Grounding SAM is configured correctly (see below)
-4. ### 🔁 Place Grounding SAM
+### 🔁 Place Grounding SAM
 
 Our system integrates Grounding SAM for character segmentation and mask guidance. You must clone the official Grounding SAM repository and **place the folder** inside this repo with the customized version provided here.
 
 🔗 **Grounding SAM Repository:** [[https://github.com/IDEA-Research/GroundingSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything)]
 
-5. ✅ **Run the main app using**:
+4. ✅ **Run the main app using**:
 ```bash
 python app.py
