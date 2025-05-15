@@ -24,7 +24,7 @@ This project was developed as part of our undergraduate research to advance cont
 *Venue:* Munich, Germany  
 *Dates:* November 6–7, 2025  
 *Authors:* Thathsarani Sandarekha, supervised by Mr. Prasan Yapa  
-*Status:* **Submitted and under review**
+*Status:* **Accepted**
 
 ### 📌 Review Paper  
 **A Systematic Review of Multi-Character Image Generation**  
@@ -32,7 +32,7 @@ This project was developed as part of our undergraduate research to advance cont
 *Venue:* Munich, Germany  
 *Dates:* November 6–7, 2025  
 *Authors:* Thathsarani Sandarekha, supervised by Mr. Prasan Yapa  
-*Status:* **Submitted and under review**
+*Status:* **Accepted for poster presentation**
 
 ---
 
