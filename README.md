@@ -23,13 +23,15 @@ This project was developed as part of our undergraduate research to advance cont
 *Submitted to:* Future Technologies Conference (FTC) 2025  
 *Venue:* Munich, Germany  
 *Dates:* November 6–7, 2025  
-*Status:* **Submitted and under review**  
+*Authors:* Thathsarani Sandarekha, supervised by Mr. Prasan Yapa 
+*Status:* **Submitted and under review**
 
 ### 📌 Review Paper  
 **A Systematic Review of Multi-Character Image Generation**  
 *Submitted to:* Future Technologies Conference (FTC) 2025  
 *Venue:* Munich, Germany  
 *Dates:* November 6–7, 2025  
+*Authors:* Thathsarani Sandarekha, supervised by Mr. Prasan Yapa 
 *Status:* **Submitted and under review**
 
 ---
